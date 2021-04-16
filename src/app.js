@@ -1,6 +1,6 @@
 const express = require('express');
 const helmet = require('helmet');
-const {addAsync} = require('@awaitjs/express');
+const { addAsync } = require('@awaitjs/express');
 const jwtMiddleware = require('./middleware/jwt-middleware');
 const register = require('./auth/register');
 const signin = require('./auth/signin');
@@ -20,6 +20,11 @@ module.exports = function () {
   /* istanbul ignore next */
   app.get('/hi', (req, res) => {
     res.status(200).send('Hi there!');
+  });
+
+  /* istanbul ignore next */
+  app.get('/test', (req, res) => {
+    res.status(200).send('My test!');
   });
 
   return app;
