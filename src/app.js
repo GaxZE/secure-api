@@ -6,7 +6,7 @@ const register = require('./auth/register');
 const signin = require('./auth/signin');
 const getProfile = require('./auth/get-profile');
 
-module.exports = function () {
+module.exports = function() {
   const app = addAsync(express());
   app.use(helmet());
   app.use(express.json());
