@@ -1,6 +1,6 @@
 const express = require('express');
 const helmet = require('helmet');
-const { addAsync } = require('@awaitjs/express');
+const {addAsync} = require('@awaitjs/express');
 const jwtMiddleware = require('./middleware/jwt-middleware');
 const register = require('./auth/register');
 const signin = require('./auth/signin');
