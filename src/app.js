@@ -22,5 +22,10 @@ module.exports = function() {
     res.status(200).send('Hi there!');
   });
 
+  /* istanbul ignore next */
+  app.get('/test', (req, res) => {
+    res.status(200).send('My test!');
+  });
+
   return app;
 };
